@@ -1,0 +1,882 @@
+mysql> SHOW DATABASES;
++------------------------+
+| Database               |
++------------------------+
+| barberia               |
+| barberia_corte_maestro |
+| elatico                |
+| examen2xfbb            |
+| examen3                |
+| information_schema     |
+| mysql                  |
+| performance_schema     |
+| rentas                 |
+| seguros                |
+| sys                    |
+| tienda_discos          |
+| universidad            |
++------------------------+
+13 rows in set (0.00 sec)
+
+mysql> USE barberia_corte_maestro;
+Database changed
+mysql> SHOW TABLES;
++----------------------------------+
+| Tables_in_barberia_corte_maestro |
++----------------------------------+
+| barberos                         |
+| cita_servicio                    |
+| citas                            |
+| clientes                         |
+| especialidad                     |
+| estado_cita                      |
+| inventario                       |
+| metodo_pago                      |
+| pagos                            |
+| servicios                        |
++----------------------------------+
+10 rows in set (0.08 sec)
+
+mysql> DESCRIBE clientes;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id_cliente | int          | NO   | PRI | NULL    | auto_increment |
+| nombre     | varchar(100) | NO   |     | NULL    |                |
+| telefono   | varchar(15)  | YES  |     | NULL    |                |
+| correo     | varchar(100) | YES  | UNI | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.04 sec)
+
+mysql> SELECT COUNT(*) AS id_cliente FROM clientes;
++------------+
+| id_cliente |
++------------+
+|        100 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> DESCRIBE citas;
++------------+------+------+-----+---------+----------------+
+| Field      | Type | Null | Key | Default | Extra          |
++------------+------+------+-----+---------+----------------+
+| id_cita    | int  | NO   | PRI | NULL    | auto_increment |
+| id_cliente | int  | YES  | MUL | NULL    |                |
+| id_barbero | int  | YES  | MUL | NULL    |                |
+| fecha      | date | NO   |     | NULL    |                |
+| hora       | time | NO   |     | NULL    |                |
+| id_estado  | int  | YES  | MUL | NULL    |                |
++------------+------+------+-----+---------+----------------+
+6 rows in set (0.01 sec)
+
+mysql> SELECT COUNT(*) AS id_cita FROM citas;
++---------+
+| id_cita |
++---------+
+|     131 |
++---------+
+1 row in set (0.00 sec)
+
+mysql> SOURCE C:/Users/xifer/Downloads/bd_equipo7_final.sql;
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.44 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (1.53 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 53 rows affected (0.11 sec)
+Records: 53  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.49 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.67 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.05 sec)
+
+Query OK, 514 rows affected (0.14 sec)
+Records: 514  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.05 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.54 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (1.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.03 sec)
+
+Query OK, 514 rows affected (0.18 sec)
+Records: 514  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.56 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.51 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.04 sec)
+
+Query OK, 500 rows affected (0.57 sec)
+Records: 500  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.65 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.56 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 3 rows affected (0.13 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.10 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.43 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.65 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 3 rows affected (0.13 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.10 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.03 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.80 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.03 sec)
+
+Query OK, 5 rows affected (0.07 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.08 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.60 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.56 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.04 sec)
+
+Query OK, 3 rows affected (0.09 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.08 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.59 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.90 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.04 sec)
+
+Query OK, 514 rows affected (0.22 sec)
+Records: 514  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.13 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.56 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.90 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.13 sec)
+
+Query OK, 15 rows affected (0.06 sec)
+Records: 15  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.15 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> SHOW DATABASES;
++------------------------+
+| Database               |
++------------------------+
+| barberia               |
+| barberia_corte_maestro |
+| elatico                |
+| examen2xfbb            |
+| examen3                |
+| information_schema     |
+| mysql                  |
+| performance_schema     |
+| rentas                 |
+| seguros                |
+| sys                    |
+| tienda_discos          |
+| universidad            |
++------------------------+
+13 rows in set (0.00 sec)
+
+mysql> USE barberia_corte_maestro;
+Database changed
+mysql> SHOW TABLES;
++----------------------------------+
+| Tables_in_barberia_corte_maestro |
++----------------------------------+
+| barberos                         |
+| cita_servicio                    |
+| citas                            |
+| clientes                         |
+| especialidad                     |
+| estado_cita                      |
+| grupos_estudio                   |
+| inventario                       |
+| metodo_pago                      |
+| pagos                            |
+| servicios                        |
++----------------------------------+
+11 rows in set (0.00 sec)
+
+mysql> DESCRIBE clientes;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id_cliente | int          | NO   | PRI | NULL    | auto_increment |
+| nombre     | varchar(100) | NO   |     | NULL    |                |
+| telefono   | varchar(15)  | YES  |     | NULL    |                |
+| correo     | varchar(100) | YES  | UNI | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> SELECT COUNT (*) AS id_cliente FROM clientes;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*) AS id_cliente FROM clientes' at line 1
+mysql> SELECT COUNT(*) AS id_cliente FROM clientes;
++------------+
+| id_cliente |
++------------+
+|        500 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> DESCRIBE citas;
++------------+------+------+-----+---------+----------------+
+| Field      | Type | Null | Key | Default | Extra          |
++------------+------+------+-----+---------+----------------+
+| id_cita    | int  | NO   | PRI | NULL    | auto_increment |
+| id_cliente | int  | YES  | MUL | NULL    |                |
+| id_barbero | int  | YES  | MUL | NULL    |                |
+| fecha      | date | NO   |     | NULL    |                |
+| hora       | time | NO   |     | NULL    |                |
+| id_estado  | int  | YES  | MUL | NULL    |                |
++------------+------+------+-----+---------+----------------+
+6 rows in set (0.01 sec)
+
+mysql> SELECT COUNT(*) AS id_cita FROM citas;
++---------+
+| id_cita |
++---------+
+|     514 |
++---------+
+1 row in set (0.00 sec)
+
+mysql> SOURCE C:/Users/xifer/Desktop/etapa3_equipo07.sql;
+Database changed
+Query OK, 0 rows affected (0.00 sec)
+
++-------------+---------+-------+
+| nombre      | grupo   | Total |
++-------------+---------+-------+
+| Pedro Lopez | Grupo C |    80 |
+| Luis Garcia | Grupo E |    80 |
++-------------+---------+-------+
+2 rows in set (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++------------------+-------------+
+| nombre_servicio  | estrategico |
++------------------+-------------+
+| Diseño de barba  |           8 |
++------------------+-------------+
+1 row in set (0.02 sec)
+
++------------+------------------------------+-------------+-------------+
+| id_cliente | nombre                       | total_citas | gasto_total |
++------------+------------------------------+-------------+-------------+
+|         71 | Walter Emilio Velazquez Diaz |           3 |      330.00 |
+|         72 | Xavier Rodrigo Nieto Vargas  |           2 |      400.00 |
+|         73 | Yahir Hugo Miranda Ortiz     |           2 |      280.00 |
+|         74 | Zaid Manuel Quintana Lopez   |           2 |      500.00 |
+|         75 | Alan Ricardo Valencia Cruz   |           2 |      800.00 |
+|         76 | Brian Eduardo Bravo Diaz     |           2 |      220.00 |
+|         77 | Cesar Daniel Trejo Vargas    |           2 |      420.00 |
+|         78 | Dario Antonio Medina Perez   |           2 |      600.00 |
+|         79 | Elias Fernando Beltran Ruiz  |           2 |      160.00 |
+|         80 | Felipe Mario Leon Castillo   |           2 |      480.00 |
++------------+------------------------------+-------------+-------------+
+10 rows in set (0.00 sec)
+
++-----------+----------------+
+| dia       | Total de citas |
++-----------+----------------+
+| Wednesday |            110 |
++-----------+----------------+
+1 row in set (0.01 sec)
+
++--------------+-----------+
+| nombre       | ganancias |
++--------------+-----------+
+| Oscar Flores |   1540.00 |
+| Emilio Rojas |   1540.00 |
++--------------+-----------+
+2 rows in set (0.03 sec)
+
++--------------------------------+
+| promedio de ganancias por cita |
++--------------------------------+
+|                     155.722772 |
++--------------------------------+
+1 row in set (0.01 sec)
+
++---------------+---------------+
+| metodo_pago   | cantidad_usos |
++---------------+---------------+
+| efectivo      |           344 |
+| tarjeta       |            97 |
+| transferencia |            73 |
++---------------+---------------+
+3 rows in set (0.01 sec)
+
++----------+------------------+
+| servicio | Ingresos totales |
++----------+------------------+
+| Cortes   |         53010.00 |
+| Barba    |          7280.00 |
+| Tinte    |         18350.00 |
++----------+------------------+
+3 rows in set (0.01 sec)
+
++----------+-------------+
+| hora     | total_citas |
++----------+-------------+
+| 09:00:00 |         112 |
+| 09:30:00 |          73 |
+| 10:00:00 |          96 |
+| 10:30:00 |          44 |
+| 11:00:00 |          63 |
+| 11:30:00 |          36 |
+| 12:00:00 |          45 |
+| 12:30:00 |          27 |
+| 13:00:00 |           9 |
+| 13:30:00 |           9 |
++----------+-------------+
+10 rows in set (0.00 sec)
+
++------------+---------------------+-------------------+-------------+----------------+
+| id_barbero | nombre              | horas_disponibles | total_citas | tasa_ocupacion |
++------------+---------------------+-------------------+-------------+----------------+
+|          1 | Juan Perez          |             162.0 |          44 |         0.2716 |
+|          2 | Pedro Lopez         |             157.5 |          44 |         0.2794 |
+|          3 | Luis Garcia         |             157.5 |          43 |         0.2730 |
+|          4 | Carlos Mendoza      |              18.0 |           6 |         0.3333 |
+|          5 | Luis Fernandez      |              18.0 |           7 |         0.3889 |
+|          6 | Javier Rodriguez    |              18.0 |           8 |         0.4444 |
+|          7 | Miguel Angel Torres |              22.5 |           5 |         0.2222 |
+|          8 | Alejandro Gomez     |              22.5 |           9 |         0.4000 |
+|          9 | Francisco Lopez     |              27.0 |           6 |         0.2222 |
+|         10 | Roberto Sanchez     |              22.5 |          10 |         0.4444 |
+|         11 | Andres Martinez     |              22.5 |           7 |         0.3111 |
+|         12 | Fernando Diaz       |              22.5 |           8 |         0.3556 |
+|         13 | Ricardo Perez       |              27.0 |           6 |         0.2222 |
+|         14 | Sergio Gonzalez     |              22.5 |           9 |         0.4000 |
+|         15 | Manuel Ramirez      |              22.5 |           7 |         0.3111 |
+|         16 | Antonio Jimenez     |              22.5 |           5 |         0.2222 |
+|         17 | Pablo Ruiz          |              22.5 |           8 |         0.3556 |
+|         18 | Jorge Hernandez     |              22.5 |          10 |         0.4444 |
+|         19 | Daniel Castro       |              27.0 |           6 |         0.2222 |
+|         20 | Juan Carlos Vargas  |              27.0 |           9 |         0.3333 |
+|         21 | Gabriel Ortega      |              31.5 |           7 |         0.2222 |
+|         22 | David Reyes         |              27.0 |           8 |         0.2963 |
+|         23 | Adrian Morales      |              27.0 |           6 |         0.2222 |
+|         24 | Oscar Flores        |              22.5 |          11 |         0.4889 |
+|         25 | Victor Guzman       |              22.5 |           7 |         0.3111 |
+|         26 | Hugo Romero         |              22.5 |           9 |         0.4000 |
+|         27 | Raul Delgado        |              27.0 |           6 |         0.2222 |
+|         28 | Mario Acosta        |              22.5 |           8 |         0.3556 |
+|         29 | Eduardo Herrera     |              27.0 |          10 |         0.3704 |
+|         30 | Alvaro Nunez        |              31.5 |           7 |         0.2222 |
+|         31 | Emilio Rojas        |              27.0 |           9 |         0.3333 |
+|         32 | Ruben Fuentes       |              22.5 |           5 |         0.2222 |
+|         33 | Ivan Salazar        |              36.0 |           8 |         0.2222 |
+|         34 | Hector Espinoza     |              22.5 |           6 |         0.2667 |
+|         35 | Salvador Cabrera    |              22.5 |           9 |         0.4000 |
+|         36 | Mauricio Padilla    |              31.5 |           7 |         0.2222 |
+|         37 | Arturo Medina       |              27.0 |           8 |         0.2963 |
+|         38 | Cesar Maldonado     |              27.0 |          10 |         0.3704 |
+|         39 | Enrique Aguirre     |              27.0 |           6 |         0.2222 |
+|         40 | Rafael Castillo     |              36.0 |           8 |         0.2222 |
+|         41 | Tomas Vazquez       |              27.0 |           9 |         0.3333 |
+|         42 | Nicolas Rios        |              31.5 |           7 |         0.2222 |
+|         43 | Ignacio Paredes     |              27.0 |           6 |         0.2222 |
+|         44 | Esteban Montoya     |              27.0 |           8 |         0.2963 |
+|         45 | Fabian Serrano      |              27.0 |          10 |         0.3704 |
+|         46 | Damian Carrillo     |              27.0 |           6 |         0.2222 |
+|         47 | Julian Lozano       |              27.0 |           9 |         0.3333 |
+|         48 | Leonardo Benitez    |              31.5 |           7 |         0.2222 |
+|         49 | Rodrigo Leal        |              36.0 |           8 |         0.2222 |
+|         50 | Santiago Franco     |              27.0 |           6 |         0.2222 |
+|         51 | Axel Silva          |              27.0 |           9 |         0.3333 |
+|         52 | Luciano Cardenas    |              31.5 |           7 |         0.2222 |
+|         53 | Felipe Sandoval     |              27.0 |          10 |         0.3704 |
++------------+---------------------+-------------------+-------------+----------------+
+53 rows in set (0.00 sec)
+
+ERROR 1304 (42000): PROCEDURE cita_fecha already exists
++---------+--------------------------------+-----------------+----------+-----------+
+| id_cita | cliente                        | barbero         | hora     | estado    |
++---------+--------------------------------+-----------------+----------+-----------+
+|     354 | Telesforo Andres Z Valverde    | Ivan Salazar    | 09:30:00 | pendiente |
+|     349 | Otilio Jose Ulate Cordero      | Ruben Fuentes   | 11:30:00 | pendiente |
+|     343 | Isidro Jose Pacheco Ramirez    | Emilio Rojas    | 09:00:00 | pendiente |
+|     333 | Angel Jose Gomez Murillo       | Alvaro Nunez    | 12:00:00 | pendiente |
+|     327 | Felipe Isaac Diaz Masis        | Eduardo Herrera | 11:00:00 | pendiente |
+|     326 | Josue Andres Delgado Quesada   | Eduardo Herrera | 10:00:00 | pendiente |
+|     318 | Moises Isaac Calvo Granados    | Mario Acosta    | 09:30:00 | pendiente |
+|     309 | Oscar Eduardo Vargas Valerin   | Raul Delgado    | 11:00:00 | pendiente |
+|     304 | Jostin Isaac Torres Rojas      | Hugo Romero     | 09:00:00 | pendiente |
+|     295 | Randy Jose Ramirez Leiton      | Victor Guzman   | 10:00:00 | pendiente |
+|     288 | Alonso Isaac Navarro Rodriguez | Oscar Flores    | 09:00:00 | pendiente |
++---------+--------------------------------+-----------------+----------+-----------+
+11 rows in set (0.04 sec)
+
+Query OK, 0 rows affected (0.12 sec)
+
+ERROR 1304 (42000): FUNCTION contar_citas_cliente already exists
++--------------------------+
+| contar_citas_cliente(38) |
++--------------------------+
+|                        1 |
++--------------------------+
+1 row in set (0.00 sec)
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '--vistas
+CREATE VIEW estadisticas_barberos AS
+SELECT 
+    b.id_barbero,
+    b.no' at line 1
++------------+---------------------+------------+-------------+----------------+---------------------------+
+| id_barbero | nombre              | tipo       | total_citas | total_ingresos | ingreso_promedio_por_cita |
++------------+---------------------+------------+-------------+----------------+---------------------------+
+|          1 | Juan Perez          | titular    |          44 |        8510.00 |                    193.41 |
+|          2 | Pedro Lopez         | titular    |          44 |        8630.00 |                    196.14 |
+|          3 | Luis Garcia         | titular    |          43 |        9140.00 |                    212.56 |
+|          4 | Carlos Mendoza      | estudiante |           6 |         850.00 |                    141.67 |
+|          5 | Luis Fernandez      | estudiante |           7 |         960.00 |                    137.14 |
+|          6 | Javier Rodriguez    | estudiante |           8 |        1060.00 |                    132.50 |
+|          7 | Miguel Angel Torres | estudiante |           5 |         620.00 |                    124.00 |
+|          8 | Alejandro Gomez     | estudiante |           9 |        1270.00 |                    141.11 |
+|          9 | Francisco Lopez     | estudiante |           6 |         850.00 |                    141.67 |
+|         10 | Roberto Sanchez     | estudiante |          10 |        1360.00 |                    136.00 |
+|         11 | Andres Martinez     | estudiante |           7 |         970.00 |                    138.57 |
+|         12 | Fernando Diaz       | estudiante |           8 |        1100.00 |                    137.50 |
+|         13 | Ricardo Perez       | estudiante |           6 |         770.00 |                    128.33 |
+|         14 | Sergio Gonzalez     | estudiante |           9 |        1210.00 |                    134.44 |
+|         15 | Manuel Ramirez      | estudiante |           7 |         970.00 |                    138.57 |
+|         16 | Antonio Jimenez     | estudiante |           5 |         690.00 |                    138.00 |
+|         17 | Pablo Ruiz          | estudiante |           8 |        1120.00 |                    140.00 |
+|         18 | Jorge Hernandez     | estudiante |          10 |        1290.00 |                    129.00 |
+|         19 | Daniel Castro       | estudiante |           6 |         890.00 |                    148.33 |
+|         20 | Juan Carlos Vargas  | estudiante |           9 |        1390.00 |                    154.44 |
+|         21 | Gabriel Ortega      | estudiante |           7 |         890.00 |                    127.14 |
+|         22 | David Reyes         | estudiante |           8 |        1100.00 |                    137.50 |
+|         23 | Adrian Morales      | estudiante |           6 |         700.00 |                    116.67 |
+|         24 | Oscar Flores        | estudiante |          11 |        1540.00 |                    140.00 |
+|         25 | Victor Guzman       | estudiante |           7 |        1090.00 |                    155.71 |
+|         26 | Hugo Romero         | estudiante |           9 |        1250.00 |                    138.89 |
+|         27 | Raul Delgado        | estudiante |           6 |         890.00 |                    148.33 |
+|         28 | Mario Acosta        | estudiante |           8 |        1290.00 |                    161.25 |
+|         29 | Eduardo Herrera     | estudiante |          10 |        1290.00 |                    129.00 |
+|         30 | Alvaro Nunez        | estudiante |           7 |         920.00 |                    131.43 |
+|         31 | Emilio Rojas        | estudiante |           9 |        1540.00 |                    171.11 |
+|         32 | Ruben Fuentes       | estudiante |           5 |         740.00 |                    148.00 |
+|         33 | Ivan Salazar        | estudiante |           8 |         980.00 |                    122.50 |
+|         34 | Hector Espinoza     | estudiante |           6 |         890.00 |                    148.33 |
+|         35 | Salvador Cabrera    | estudiante |           9 |        1140.00 |                    126.67 |
+|         36 | Mauricio Padilla    | estudiante |           7 |        1190.00 |                    170.00 |
+|         37 | Arturo Medina       | estudiante |           8 |         970.00 |                    121.25 |
+|         38 | Cesar Maldonado     | estudiante |          10 |        1530.00 |                    153.00 |
+|         39 | Enrique Aguirre     | estudiante |           6 |         770.00 |                    128.33 |
+|         40 | Rafael Castillo     | estudiante |           8 |        1100.00 |                    137.50 |
+|         41 | Tomas Vazquez       | estudiante |           9 |        1200.00 |                    133.33 |
+|         42 | Nicolas Rios        | estudiante |           7 |         890.00 |                    127.14 |
+|         43 | Ignacio Paredes     | estudiante |           6 |         770.00 |                    128.33 |
+|         44 | Esteban Montoya     | estudiante |           8 |        1360.00 |                    170.00 |
+|         45 | Fabian Serrano      | estudiante |          10 |        1300.00 |                    130.00 |
+|         46 | Damian Carrillo     | estudiante |           6 |        1090.00 |                    181.67 |
+|         47 | Julian Lozano       | estudiante |           9 |        1200.00 |                    133.33 |
+|         48 | Leonardo Benitez    | estudiante |           7 |         890.00 |                    127.14 |
+|         49 | Rodrigo Leal        | estudiante |           8 |        1460.00 |                    182.50 |
+|         50 | Santiago Franco     | estudiante |           6 |         830.00 |                    138.33 |
+|         51 | Axel Silva          | estudiante |           9 |        1170.00 |                    130.00 |
+|         52 | Luciano Cardenas    | estudiante |           7 |         840.00 |                    120.00 |
+|         53 | Felipe Sandoval     | estudiante |          10 |         180.00 |                    180.00 |
++------------+---------------------+------------+-------------+----------------+---------------------------+
+53 rows in set (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.16 sec)
+
+Query OK, 0 rows affected (0.12 sec)
+
+ERROR 1644 (45000): ERROR: El correo electrónico es invalido (debe contener @)
+mysql> call cita_fecha('2026-05-27');
++---------+--------------------------------+-----------------+----------+-----------+
+| id_cita | cliente                        | barbero         | hora     | estado    |
++---------+--------------------------------+-----------------+----------+-----------+
+|     354 | Telesforo Andres Z Valverde    | Ivan Salazar    | 09:30:00 | pendiente |
+|     349 | Otilio Jose Ulate Cordero      | Ruben Fuentes   | 11:30:00 | pendiente |
+|     343 | Isidro Jose Pacheco Ramirez    | Emilio Rojas    | 09:00:00 | pendiente |
+|     333 | Angel Jose Gomez Murillo       | Alvaro Nunez    | 12:00:00 | pendiente |
+|     327 | Felipe Isaac Diaz Masis        | Eduardo Herrera | 11:00:00 | pendiente |
+|     326 | Josue Andres Delgado Quesada   | Eduardo Herrera | 10:00:00 | pendiente |
+|     318 | Moises Isaac Calvo Granados    | Mario Acosta    | 09:30:00 | pendiente |
+|     309 | Oscar Eduardo Vargas Valerin   | Raul Delgado    | 11:00:00 | pendiente |
+|     304 | Jostin Isaac Torres Rojas      | Hugo Romero     | 09:00:00 | pendiente |
+|     295 | Randy Jose Ramirez Leiton      | Victor Guzman   | 10:00:00 | pendiente |
+|     288 | Alonso Isaac Navarro Rodriguez | Oscar Flores    | 09:00:00 | pendiente |
++---------+--------------------------------+-----------------+----------+-----------+
+11 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> SELECT contar_citas_cliente(38);
++--------------------------+
+| contar_citas_cliente(38) |
++--------------------------+
+|                        1 |
++--------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT * FROM estadisticas_barberos;
++------------+---------------------+------------+-------------+----------------+---------------------------+
+| id_barbero | nombre              | tipo       | total_citas | total_ingresos | ingreso_promedio_por_cita |
++------------+---------------------+------------+-------------+----------------+---------------------------+
+|          1 | Juan Perez          | titular    |          44 |        8510.00 |                    193.41 |
+|          2 | Pedro Lopez         | titular    |          44 |        8630.00 |                    196.14 |
+|          3 | Luis Garcia         | titular    |          43 |        9140.00 |                    212.56 |
+|          4 | Carlos Mendoza      | estudiante |           6 |         850.00 |                    141.67 |
+|          5 | Luis Fernandez      | estudiante |           7 |         960.00 |                    137.14 |
+|          6 | Javier Rodriguez    | estudiante |           8 |        1060.00 |                    132.50 |
+|          7 | Miguel Angel Torres | estudiante |           5 |         620.00 |                    124.00 |
+|          8 | Alejandro Gomez     | estudiante |           9 |        1270.00 |                    141.11 |
+|          9 | Francisco Lopez     | estudiante |           6 |         850.00 |                    141.67 |
+|         10 | Roberto Sanchez     | estudiante |          10 |        1360.00 |                    136.00 |
+|         11 | Andres Martinez     | estudiante |           7 |         970.00 |                    138.57 |
+|         12 | Fernando Diaz       | estudiante |           8 |        1100.00 |                    137.50 |
+|         13 | Ricardo Perez       | estudiante |           6 |         770.00 |                    128.33 |
+|         14 | Sergio Gonzalez     | estudiante |           9 |        1210.00 |                    134.44 |
+|         15 | Manuel Ramirez      | estudiante |           7 |         970.00 |                    138.57 |
+|         16 | Antonio Jimenez     | estudiante |           5 |         690.00 |                    138.00 |
+|         17 | Pablo Ruiz          | estudiante |           8 |        1120.00 |                    140.00 |
+|         18 | Jorge Hernandez     | estudiante |          10 |        1290.00 |                    129.00 |
+|         19 | Daniel Castro       | estudiante |           6 |         890.00 |                    148.33 |
+|         20 | Juan Carlos Vargas  | estudiante |           9 |        1390.00 |                    154.44 |
+|         21 | Gabriel Ortega      | estudiante |           7 |         890.00 |                    127.14 |
+|         22 | David Reyes         | estudiante |           8 |        1100.00 |                    137.50 |
+|         23 | Adrian Morales      | estudiante |           6 |         700.00 |                    116.67 |
+|         24 | Oscar Flores        | estudiante |          11 |        1540.00 |                    140.00 |
+|         25 | Victor Guzman       | estudiante |           7 |        1090.00 |                    155.71 |
+|         26 | Hugo Romero         | estudiante |           9 |        1250.00 |                    138.89 |
+|         27 | Raul Delgado        | estudiante |           6 |         890.00 |                    148.33 |
+|         28 | Mario Acosta        | estudiante |           8 |        1290.00 |                    161.25 |
+|         29 | Eduardo Herrera     | estudiante |          10 |        1290.00 |                    129.00 |
+|         30 | Alvaro Nunez        | estudiante |           7 |         920.00 |                    131.43 |
+|         31 | Emilio Rojas        | estudiante |           9 |        1540.00 |                    171.11 |
+|         32 | Ruben Fuentes       | estudiante |           5 |         740.00 |                    148.00 |
+|         33 | Ivan Salazar        | estudiante |           8 |         980.00 |                    122.50 |
+|         34 | Hector Espinoza     | estudiante |           6 |         890.00 |                    148.33 |
+|         35 | Salvador Cabrera    | estudiante |           9 |        1140.00 |                    126.67 |
+|         36 | Mauricio Padilla    | estudiante |           7 |        1190.00 |                    170.00 |
+|         37 | Arturo Medina       | estudiante |           8 |         970.00 |                    121.25 |
+|         38 | Cesar Maldonado     | estudiante |          10 |        1530.00 |                    153.00 |
+|         39 | Enrique Aguirre     | estudiante |           6 |         770.00 |                    128.33 |
+|         40 | Rafael Castillo     | estudiante |           8 |        1100.00 |                    137.50 |
+|         41 | Tomas Vazquez       | estudiante |           9 |        1200.00 |                    133.33 |
+|         42 | Nicolas Rios        | estudiante |           7 |         890.00 |                    127.14 |
+|         43 | Ignacio Paredes     | estudiante |           6 |         770.00 |                    128.33 |
+|         44 | Esteban Montoya     | estudiante |           8 |        1360.00 |                    170.00 |
+|         45 | Fabian Serrano      | estudiante |          10 |        1300.00 |                    130.00 |
+|         46 | Damian Carrillo     | estudiante |           6 |        1090.00 |                    181.67 |
+|         47 | Julian Lozano       | estudiante |           9 |        1200.00 |                    133.33 |
+|         48 | Leonardo Benitez    | estudiante |           7 |         890.00 |                    127.14 |
+|         49 | Rodrigo Leal        | estudiante |           8 |        1460.00 |                    182.50 |
+|         50 | Santiago Franco     | estudiante |           6 |         830.00 |                    138.33 |
+|         51 | Axel Silva          | estudiante |           9 |        1170.00 |                    130.00 |
+|         52 | Luciano Cardenas    | estudiante |           7 |         840.00 |                    120.00 |
+|         53 | Felipe Sandoval     | estudiante |          10 |         180.00 |                    180.00 |
++------------+---------------------+------------+-------------+----------------+---------------------------+
+53 rows in set (0.01 sec)
+
+mysql> INSERT INTO clientes (nombre, telefono, correo)VALUES ('Alejandro Antonio Ventura Santos', '5512345000', 'avemaria.gmail.com');
+ERROR 1644 (45000): ERROR: El correo electrónico es invalido (debe contener @)
+mysql> NOTEE;
