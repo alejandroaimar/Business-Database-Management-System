@@ -118,3 +118,9 @@ Business-Database-Management-System/
 
 ├── README.md
 └── LICENSE
+
+## Author
+
+**Alejandro Aimar**
+
+Actuarial Science Student | Finance & Risk Management Enthusiast
